@@ -1,0 +1,8 @@
+# Repertory
+/build/
+/nbproject/
+/vendor/
+
+# File
+/*.phar
+/.php_cs.cache
