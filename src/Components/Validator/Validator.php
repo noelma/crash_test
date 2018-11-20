@@ -916,10 +916,7 @@ class Validator
     protected function validStripTags(
         $keyStr,
         $value,
-        $tags = '<h1><h2><h3><h4><h5><h6>'
-    . '<p><span><b><i><u><a>'
-    . '<table><thead><tbody><tfoot><tr><th><td>'
-    . '<ul><ol><li><dl><dt><dd><img><br><hr>'
+        $tags = '<h1><h2><h3><h4><h5><h6><p><span><b><i><u><a><table><thead><tbody><tfoot><tr><th><td><ul><ol><li><dl><dt><dd><img><br><hr>'
     ) {
         if (!is_string($value)) {
             throw new \InvalidArgumentException(
