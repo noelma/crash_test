@@ -318,8 +318,11 @@ class FormBuilder
      */
     public function token()
     {
-        if (session_id() != '') {
-            throw new \Exception('error');
+        if (session_id() == '') {
+            @session_start([
+                'cookie_httponly' => true,
+                'cookie_secure' => true
+            ]);
         }
         /* On génère un token totalement unique. */
         $token                    = uniqid(rand(), true);

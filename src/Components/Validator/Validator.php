@@ -941,7 +941,10 @@ class Validator
     protected function validToken($key, $value, $time = 900)
     {
         if (session_id() == '') {
-            @session_start();
+            @session_start([
+                'cookie_httponly' => true,
+                'cookie_secure' => true
+            ]);
         }
 
         /* À revoir le passage d'argument boolean automatique pour les fonctions hors not */
