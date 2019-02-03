@@ -1,6 +1,4 @@
-<p align="center">
-![GitHub](https://soosyze.com/assets/files/logo/soosyze-name.png)
-</p>
+<p align="center"><img src="https://soosyze.com/assets/files/logo/soosyze-name.png"></p>
 
 [![GitHub](https://img.shields.io/github/license/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/blob/master/LICENSE "LICENSE")
 [![GitHub tag](https://img.shields.io/github/tag/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/releases "Version")
