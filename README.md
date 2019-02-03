@@ -1,4 +1,6 @@
-<p align="center"><img src="https://soosyze.com/assets/files/logo/soosyze-name.png"></p>
+<p align="center"><a href="https://soosyze.com/" rel="noopener" target="_blank"><img src="https://soosyze.com/assets/files/logo/soosyze-name.png"></a></p>
+
+[Download](https://github.com/soosyze/soosyze/releases/download/1.0.0-alpah-4/soosyze-1.0.0-alpha4.zip)
 
 [![GitHub](https://img.shields.io/github/license/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/blob/master/LICENSE "LICENSE")
 [![GitHub tag](https://img.shields.io/github/tag/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/releases "Version")
@@ -8,10 +10,11 @@
 # À propos de Soosyze CMS
 
 Soosyze CMS est un micro système de gestion de contenu sans base de données. Il permet de créer et gérer votre site web facilement avec peu ou aucune connaissance technique. Basé sur un micro-framework PHP et une bibliothèque noSQL pour assurer sa stabilité et son évolution.
+* [Voir le site](https://soosyze.com/)
 
 # Sommaire
 
-* [Captures d'écrans](/README.md#captures-decrans)
+* [Captures d'écrans](/README.md#captures-décrans)
 * [Exigences d'installation](/README.md#exigences-dinstallation)
 * [Installation](/README.md#installation)
 * [License](/README.md#license)
