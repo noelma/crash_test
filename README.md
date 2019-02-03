@@ -11,9 +11,14 @@ Soosyze CMS est un micro système de gestion de contenu sans base de données. I
 
 # Sommaire
 
-* [Exigences d'installation](/README.md#exigences-d-installation)
+* [Captures d'écrans](/README.md#captures-decrans)
+* [Exigences d'installation](/README.md#exigences-dinstallation)
 * [Installation](/README.md#installation)
 * [License](/README.md#license)
+
+# Captures d'écrans
+
+![GitHub](https://soosyze.com/assets/files/screen/devices-accueil.png)
 
 # Exigences d'installation
 
