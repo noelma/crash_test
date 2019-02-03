@@ -1,6 +1,5 @@
 <p align="center">
 ![GitHub](https://soosyze.com/assets/files/logo/soosyze-name.png)
-[Télécharger la dernière version Soosyze CMS](https://github.com/soosyze/soosyze/releases/download/1.0.0-alpah-4/soosyze-1.0.0-alpha4.zip)
 </p>
 
 [![GitHub](https://img.shields.io/github/license/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/blob/master/LICENSE "LICENSE")
@@ -14,14 +13,9 @@ Soosyze CMS est un micro système de gestion de contenu sans base de données. I
 
 # Sommaire
 
-* [Captures d'écrans](/README.md#captures-d-ecrans)
 * [Exigences d'installation](/README.md#exigences-d-installation)
 * [Installation](/README.md#installation)
 * [License](/README.md#license)
-
-# Captures d'écrans
-
-![GitHub](https://soosyze.com/assets/files/screen/devices-accueil.png)
 
 # Exigences d'installation
 
