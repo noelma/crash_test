@@ -1,11 +1,8 @@
 <p align="center"><a href="https://soosyze.com/" rel="noopener" target="_blank"><img src="https://soosyze.com/assets/files/logo/soosyze-name.png"></a></p>
 
-[Download](https://github.com/soosyze/soosyze/releases/download/1.0.0-alpah-4/soosyze-1.0.0-alpha4.zip)
-
 [![GitHub](https://img.shields.io/github/license/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/blob/master/LICENSE "LICENSE")
-[![GitHub tag](https://img.shields.io/github/tag/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/releases "Version")
 [![PHP from Packagist](https://img.shields.io/badge/php-%3E%3D5.4-blue.svg)](/README.md#version-php "PHP version 5.4 minimum")
-![GitHub code size in bytes](https://img.shields.io/github/repo-size/soosyze/soosyze.svg)
+[![Download Soosyze CMS](https://img.shields.io/badge/download-1.0.0--alpha4-blue.svg)](https://github.com/soosyze/soosyze/releases/download/1.0.0-alpah-4/soosyze-1.0.0-alpha4.zip "Download Soosyze CMS")
 
 # À propos de Soosyze CMS
 
@@ -35,7 +32,7 @@ Soosyze CMS est un micro système de gestion de contenu sans base de données. I
 
 En choisissant les versions PHP 7.x vous aurez un gain de performance sur la mémoire et le temps d'exécution de 30% à 45%. Votre site en sera plus rapide.
 
-## Extensions requis
+## Extensions requises
 
 * `json` pour l'enregistrement des données et des configurations,
 * `session` pour garder en mémoire vos données (coté serveur) d'une page à l'autre,
@@ -46,7 +43,7 @@ En choisissant les versions PHP 7.x vous aurez un gain de performance sur la mé
 
 Soosyze (hors modules contributeurs) nécessite 16MB de mémoire.
 
-## Navigateur supporté
+## Navigateurs supportés
 
 Le thème de base et d'administration sont réalisés avec le framework Bootstrap 3 :
 * [Navigateurs supportés](https://getbootstrap.com/docs/3.3/getting-started/#desktop-browsers)
@@ -58,7 +55,7 @@ Le thème de base et d'administration se décharge d'une partie des libraies d'a
 * Bootstrap 3.3.7
 * JQuery 3.2.1,
 * JQuery UI 1.12.0
-Pour l'affichage complet des thèmes de base vous devez donc avoir une connexion réseau pour que ces libraires soient utilisées.
+Pour l'affichage complet des thèmes de bases vous devez donc avoir une connexion réseau pour que ces libraires soient utilisées.
 
 # Installation
 
