@@ -17,6 +17,7 @@ install:
   - composer require php-coveralls/php-coveralls --update-no-dev
 
 script:
+  - phpunit --version
   - phpunit
   
 after_success:
