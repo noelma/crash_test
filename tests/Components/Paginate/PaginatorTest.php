@@ -19,4 +19,9 @@ class PaginatorTest extends \PHPUnit\Framework\TestCase
     protected function tearDown()
     {
     }
+    
+    public function testPagniate()
+    {
+        $this->assertTrue(true);
+    }
 }

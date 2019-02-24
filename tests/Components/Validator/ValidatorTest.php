@@ -1010,17 +1010,17 @@ class ValidatorTest extends \PHPUnit\Framework\TestCase
         $this->assertCount(2, $this->object->getErrors());
     }
     
-    public function testValidRegexPipe()
-    {
-        $this->object->setInputs([
-            'field_regex'              => 'hello world',
-        ])->setRules([
-            'field_regex'              => ['regex' => '/^h.*|world$/'],
-        ]);
-
-        $this->assertTrue($this->object->isValid());
-    }
-
+//    public function testValidRegexPipe()
+//    {
+//        $this->object->setInputs([
+//            'field_regex'              => 'hello world',
+//        ])->setRules([
+//            'field_regex'              => ['regex' => '/^h.*|world$/'],
+//        ]);
+//
+//        $this->assertTrue($this->object->isValid());
+//    }
+//
     public function testValidSlug()
     {
         $this->object->setInputs([
