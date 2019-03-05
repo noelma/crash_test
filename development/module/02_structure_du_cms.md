@@ -62,7 +62,7 @@ Le répértoire `core` contient l’ensemble du code source :
 
 Le répertoire `vendor` contient toutes les bibliothèques nécessaires au bon fonctionnement de l’application :
 * `ircmaxell/password-compat` : la bibliothèque qui permet de hasher les mots de passe en version 5.4 de PHP,
-* `psr/container` : l'interface pour le CID [![PSR-11](https://img.shields.io/badge/PSR-11-yellow.svg)](https://www.php-fig.org/psr/psr-11 "Container Interface"),
-* `psr/http-message` : l'interface pour les objets Request, Response, Message, Uri… [![PSR-7](https://img.shields.io/badge/PSR-7-yellow.svg)](https://www.php-fig.org/psr/psr-7 "HTTP Message Interface"),
+* `psr/container` : l’interface pour le CID [![PSR-11](https://img.shields.io/badge/PSR-11-yellow.svg)](https://www.php-fig.org/psr/psr-11 "Container Interface"),
+* `psr/http-message` : l’interface pour les objets Request, Response, Message, Uri… [![PSR-7](https://img.shields.io/badge/PSR-7-yellow.svg)](https://www.php-fig.org/psr/psr-7 "HTTP Message Interface"),
 * `soosyze/queryflatfile` : la bibliothèque qui permet de manipuler des fichiers JSON comme une base de données,
 * `soosyze/framework` : le framework sur lequel se base SoosyzeCMS.

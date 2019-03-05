@@ -12,6 +12,6 @@ TodoModule/
 └── Views/      Les vues (templates).
 ```
 
-Vous disposez maintenant d'une arborescence complète. nous verrons dans le chapitre suivant comment créer notre première interaction avec le module.
+Vous disposez maintenant d’une arborescence complète. nous verrons dans le chapitre suivant comment créer notre première interaction avec le module.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/05_structure_module).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/05_structure_module).

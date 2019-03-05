@@ -21,7 +21,7 @@ Si vous utilisez Windows comme système d’exploitation, il existe plusieurs lo
 
 * **W**indows (*votre système d’exploitation)*,
 * **A**pache (*votre serveur web*),
-* **M**ySQL (*logiciel de base de données, qui n'est pas obligatoire pour Soosyze*),
+* **M**ySQL (*logiciel de base de données, qui n’est pas obligatoire pour Soosyze*),
 * **P**HP (*le language de développement utilisé pour Soosyze*).
 
 [Site officiel](http://www.wampserver.com/).
@@ -29,7 +29,7 @@ Si vous utilisez Windows comme système d’exploitation, il existe plusieurs lo
 
 #### Pré-requis
 
-La première fois que je l’ai installé, j’ai un peu galéré. Mais j’ai fini par trouver un excellent [topic sur le forum de wamp](http://forum.wampserver.com/read.php?1,137154), détaillant toutes les étapes pour l’installer correctement. Il est régulièrement mis à jour par la communauté, mais je m'efforce ici de le vulgariser, afin que chacun s'y retrouve.
+La première fois que je l’ai installé, j’ai un peu galéré. Mais j’ai fini par trouver un excellent [topic sur le forum de wamp](http://forum.wampserver.com/read.php?1,137154), détaillant toutes les étapes pour l’installer correctement. Il est régulièrement mis à jour par la communauté, mais je m'efforce ici de le vulgariser, afin que chacun s’y retrouve.
 
 **Avant d’installer WampServeur 3**, voici certaines règles :
 
@@ -40,7 +40,7 @@ La première fois que je l’ai installé, j’ai un peu galéré. Mais j’ai f
 
 Si vous êtes dans le cas 1. ou 2. vous devez sauvegarder vos projets, désinstaller entièrement WAMP 2 pour passer à la version 3.
 
-Si vous êtes dans le cas 4. je vous conseille d’installer/ré-installer toutes les biliothèques Visual Studio. Ce sera un réel gain de temps, plutôt qu'aller vérifier quelles biliothèques existent pour ensuite cibler celles qui vous manquent.
+Si vous êtes dans le cas 4. je vous conseille d’installer/ré-installer toutes les biliothèques Visual Studio. Ce sera un réel gain de temps, plutôt qu’aller vérifier quelles biliothèques existent pour ensuite cibler celles qui vous manquent.
 
 #### Version de votre architecture (*32bits ou 64bits*)
 
@@ -59,7 +59,7 @@ Pour connaître le nombre de bits qu’utilise votre architecture, suivez les in
 2. Cliquez sur _Panneau de configuration_,
 3. Puis sur _Système et sécurité_,
 4. Et enfin sur _Système_,
-5. Vous aurez l'indication dans _Type du système_.
+5. Vous aurez l’indication dans _Type du système_.
 
 #### Bibliothèques Visual Studio
 
@@ -119,7 +119,7 @@ Je vous recommande de réserver votre nom de domaine au moment ou vous choisirez
 
 ### Une offre d’hébergement
 
-Il existe de nombreux types d'offres d’hébergement. Pour ne mentionner que celles-ci :
+Il existe de nombreux types d’offres d’hébergement. Pour ne mentionner que celles-ci :
 
 **Des offres d’hébergements mutualisés** (*niveau débutant*) : pour faire simple, les ressources (*l’espace, la mémoire, la puisssance de calcul...*) de la machine qui hébergera votre site en ligne seront partagées. Ces offres mutualisées sont l’une des moins chères proposées par les hébergeurs, puisque les coûts sont répartis entre tous les utilisateurs du service. Généralement à privilégier, car elles présentent un bon rapport qualité/prix.
 
@@ -139,7 +139,7 @@ Le conseil que je donne généralement est de choisir votre offre d’hébérgem
 
 ### Un hébergeur
 
-Comme je vous l’ai précédemment indiqué, il y a de nombreux hébergeurs. Il suffirait de rechercher sur internet avec les mots-clés "*hébergement, site web, gratuit*" pour que vous en trouviez. Mais nous allons quand même vous faire une liste non exaustive des hébergeurs web gratuits, ne pouvant pas détailler comment utiliser leurs services, faute d'avoir pu tous les tester (*peut-être un jour ^^*).
+Comme je vous l’ai précédemment indiqué, il y a de nombreux hébergeurs. Il suffirait de rechercher sur internet avec les mots-clés "*hébergement, site web, gratuit*" pour que vous en trouviez. Mais nous allons quand même vous faire une liste non exaustive des hébergeurs web gratuits, ne pouvant pas détailler comment utiliser leurs services, faute d’avoir pu tous les tester (*peut-être un jour ^^*).
 
 Essayez de les comparer afin de trouver le plus adapté pour votre site :
 
@@ -151,7 +151,7 @@ Essayez de les comparer afin de trouver le plus adapté pour votre site :
 * (*en*) [https://fr.000webhost.com/](https://fr.000webhost.com/),
 * ...
 
-Il suffit de vous inscrire sur l’un d’entre eux, souscrire à l'une des offres, et récupérer les informations suivantes :
+Il suffit de vous inscrire sur l’un d’entre eux, souscrire à l’une des offres, et récupérer les informations suivantes :
 
 * **Nom d’Hôte**,
 * **Protocole** (*dans 99% des cas c’est du FTP ou SFTP, vous verez à l’étape 2*),

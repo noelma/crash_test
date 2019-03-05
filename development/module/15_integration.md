@@ -1,4 +1,4 @@
-﻿# Intégration a SoosyzeCMS
+# Intégration à SoosyzeCMS
 
 Je pense que vous vous en doutez, mais nous nous approchons de la fin du tutoriel. 
 Dans ce chapitre, je vais vous expliquer comment : 
@@ -20,7 +20,7 @@ Ce service fournit une architecture prête à l’emploi en utilisant le composa
 
 L'architecture fournie par le service `template` :
 
-![Illustration 15_integration-theme](https://soosyze.com/assets/development/15_integration-theme.png)
+![Illustration 15_integration-theme](/assets/development/15_integration-theme.png)
 
 Pour appréhender cette architecture, il faut comprendre qu’il existe déjà un template principal par défaut (*html.php*) contenant des variables et des blocs (*pour rappel, un bloc contient un sous-template*) contenant des variables, des blocs, etc. :
 * Un premier bloc **html.php** contenant :
@@ -96,7 +96,7 @@ Voyons maintenant le résultat de notre page dans le thème du CMS.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/soosyze/?todo/index).
 Le résultat est censé être : 
 
-![Illustration 15_integration-theme_index](https://soosyze.com/assets/development/15_integration-theme_index.png)
+![Illustration 15_integration-theme_index](/assets/development/15_integration-theme_index.png)
 
 Maintenant que nous avons vu de quelle manière utiliser le service template pour l’index de notre module TodoModule, nous allons également l’utiliser pour notre administration. 
 Rendez-vous dans le contrôleur `TodoController`, et dans la fonction `admin()`, ajoutez les lignes suivantes :
@@ -121,11 +121,11 @@ public function admin($req)
 }
 ```
 
-## Exercice d’utilisation du thème pour les formulaires.
+## Exercice d’utilisation du thème pour les formulaires
 
 On va finir sur un exercice assez simple : modifier les fonctions `create()` et `edit()` de notre module `TodoModule` pour y utiliser le thème du CMS à la place du composant `Template`.
 
-## Correction de l’installation du module TodoDate
+## Correction de l’utilisation du thème pour les formulaires
 
 La correction de la fonction `create()` du contrôleur `TodoController` :
 
@@ -202,7 +202,7 @@ Ensuite, les différents paramètres :
 * `controller` : le tableau associatif des contrôleurs (*"NomContrôleur" : "NameSpace\NomContrôleur"*),
 * `version` : la version du module,
 * `description` : la description succincte des fonctionnalités (*de 255 caractères maximum*),
-* `package` : l'appartenance du module (*Core, Development, Content, SEO…*),
+* `package` : l’appartenance du module (*Core, Development, Content, SEO…*),
 * `locked` : qui dit si le module ne peut pas être désinstallé (*utilisé pour les modules du cœur*),
 * `required` : qui liste des modules requis pour l’installation.
 
@@ -283,7 +283,7 @@ Et voilà, votre module vient d’être installé, pour vous en assurer, rendez-
 Vous pouvez également faire le cheminement inverse : décocher la checkboox, puis cliquer à nouveau sur le bouton **Enregistrer**. 
 Et voilà, votre module vient d’être désinstallé. Pour vous en assurer, rendez-vous à l’URL [http://127.0.0.1/soosyze/?admin/todo](http://127.0.0.1/soosyze/?admin/todo). Une erreur 404 devrait apparaître.
 
-## Exercice installation du module TodoDate
+## Exercice d’installation du module TodoDate
 
 Pour vous assurer que vous avez bien compris comment fonctionnent l’installation et la désintallation de module, je vous propose l’exercice suivant : 
 
@@ -350,7 +350,7 @@ class Install
 }
 ```
 
-## Ajouter des droits utilisateurs 
+## Ajouter des droits utilisateurs
 
 Pour ajouter des droits utilisateurs à votre module, il faut savoir : 
 
@@ -368,7 +368,7 @@ Il existe trois rôles par défaut :
 * L’utilisateur connecté,
 * L’administrateur.
 
-Les droits utilisateurs sont vérifiés avant même l’appel au router. C’est-à-dire que le module User utilise un hook de l’application, pour vérifier si l’utilisateur a l'un des rôles permettant d’accéder à la route. 
+Les droits utilisateurs sont vérifiés avant même l’appel au router. C’est-à-dire que le module User utilise un hook de l’application, pour vérifier si l’utilisateur a l’un des rôles permettant d’accéder à la route. 
 
 Au début du tutoriel, nous avons spécifié que tous les utilisateurs pouvaient voir la liste, mais que seul l’administrateur pouvait ajouter, modifier et supprimer des items. Pour que notre module puisse avoir des droits utilisateurs corrects, nous devons donc définir une matrice de droits :
 
@@ -514,4 +514,4 @@ Pour vérifier si les droits utilisateurs sont effectif, assurez-vous d’être 
 [http://127.0.0.1/soosyze/?admin/todo](http://127.0.0.1/soosyze/?todo/index) : le résultat le lien **Todo** dans le menu principal,
 [http://127.0.0.1/soosyze/?admin/todo](http://127.0.0.1/soosyze/?admin/todo) : le résultat le lien **Todo** dans le menu d’administration.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/15_integration).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/15_integration).

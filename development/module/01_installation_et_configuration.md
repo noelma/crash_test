@@ -51,7 +51,7 @@ Le thème de base ainsi que celui d’administration se déchargent d’une part
 * JQuery 3.2.1,
 * JQuery UI 1.12.0.
 
-Pour l’affichage complet des thèmes de base, il sera nécessaire de disposer d'une connexion réseau, afin d'être en mesure d'utiliser ces bibliothèques.
+Pour l’affichage complet des thèmes de base, il sera nécessaire de disposer d’une connexion réseau, afin d’être en mesure d’utiliser ces bibliothèques.
 
 ## Installation
 

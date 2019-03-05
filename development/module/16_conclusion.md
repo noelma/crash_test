@@ -10,7 +10,7 @@ Vous voilà à la fin de ce tutoriel, en espérant que vous compreniez mieux le 
 * Ajouter des pièces jointes à un item de la liste, 
 * Etc.
 
-Ce n’est pas la première fois que je développe un outil, mais bien la première fois que j’écris une documentation. Et croyez-moi quand je vous dis que cela aura été long et laborieux. C’est dans ce genre de projet que l'on se rend compte qu’il s’agit d’un travail à part entière.
+Ce n’est pas la première fois que je développe un outil, mais bien la première fois que j’écris une documentation. Et croyez-moi quand je vous dis que cela aura été long et laborieux. C’est dans ce genre de projet que l’on se rend compte qu’il s’agit d’un travail à part entière.
 
 Je finirais par ces quelques mots :
 Une fonctionnalité non documentée est une fonctionnalité qui n’existe pas.

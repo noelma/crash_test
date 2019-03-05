@@ -57,7 +57,7 @@ class Core extends App
 
 ```
 
-Il doit être déclaré en premier, afin de permettre aux autres modules de SoosyzeCMS d'avoir accès à leurs données. Les données sont stockées par défauts dans le répertoire `app/data`.
+Il doit être déclaré en premier, afin de permettre aux autres modules de SoosyzeCMS d’avoir accès à leurs données. Les données sont stockées par défauts dans le répertoire `app/data`.
 
 Tous les fichiers de données JSON sont minifiés à l’écriture. Selon votre IDE (*Environnement de développement*) ou l’éditeur de texte enrichi que vous utilisez pour ce tutoriel, vous devrez installer un plugin ou exécuter une commande pour rendre le contenu des fichiers plus lisibles. Donc, si vous utilisez :
 
@@ -71,7 +71,7 @@ Vous pouvez également passer par un service en ligne, tel que [JSON Viewers](ht
 ### Ajouter une table manuellement
 
 Avant de manipuler les données de notre "to do list" nous allons commencer par déclarer et créer notre table manuellement.
-Rendez-vous dans le répertoire `app/data` et éditez le fichier `schema.json`. Celui-ci contient le schéma des tables utilisées par notre CMS et l'organisation des données.
+Rendez-vous dans le répertoire `app/data` et éditez le fichier `schema.json`. Celui-ci contient le schéma des tables utilisées par notre CMS et l’organisation des données.
 
 Rajoutez les lignes suivantes à la fin du fichier `schema.json` :
 
@@ -107,7 +107,7 @@ Une petite explication s’impose sur les champs de notre schéma :
 * `table` correspond au nom de la table, 
 * `path` est le chemin du fichier de données, 
 * `fields` liste des champs qui composent notre table : 
-  * `id` est l'dentifiant de l’item de type incrémental, 
+  * `id` est l’dentifiant de l’item de type incrémental, 
   * `title` correspond au titre de l’item de type chaîne de caractère de 255 caractères maximum,
   * `height` est le poids de l’item de type entier pour valeur 1 par défaut, 
   * `achieve` permet la réalisation de l’item, de type boolean pour valeur FALSE par défaut.
@@ -136,11 +136,11 @@ Maintenant que le schéma de données de la table `todo` est ajouté, il faut é
 ]
 ```
 
-Il s’agit des données de nos trois items sous la représentation JSON. Bien évidemment vous n’aurez pas à créer toutes vos tables manuellement, tel que nous venons de le faire. Quand viendra le temps d'installer le module, vous utiliserez des méthodes pour créer les tables, leurs champs, types…
+Il s’agit des données de nos trois items sous la représentation JSON. Bien évidemment vous n’aurez pas à créer toutes vos tables manuellement, tel que nous venons de le faire. Quand viendra le temps d’installer le module, vous utiliserez des méthodes pour créer les tables, leurs champs, types…
 
 ### Récupération de données
 
-Pour utiliser QueryflatFile, vous devez utiliser le service `query`. Nous allons constater cela par l'exemple. Rendons-nous dans le contrôleur `TodoController`, et remplaçons provisoirement l’appel au service `todo` dans la fonction `index()` par les lignes suivantes :
+Pour utiliser QueryflatFile, vous devez utiliser le service `query`. Nous allons constater cela par l’exemple. Rendons-nous dans le contrôleur `TodoController`, et remplaçons provisoirement l’appel au service `todo` dans la fonction `index()` par les lignes suivantes :
 
 ```php
 # modules/TodoModule/Controller/TodoController.php
@@ -483,4 +483,4 @@ Vérifions que notre fonction de suppression des items fonctionne bien.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?admin/todo](http://127.0.0.1/soosyze/?admin/todo).
 Cliquez sur le bouton **_supprimer_** dans la colonne **Actions**.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/13_model).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/13_model).

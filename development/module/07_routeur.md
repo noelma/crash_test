@@ -136,7 +136,7 @@ Vérifions que nos fonctions soient bien appelées.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/soosyze/?todo/index).
 Le résultat est censé être : 
 
-![Illustration 07_routeur-routes_statiques](https://soosyze.com/assets/development/07_routeur-routes_statiques.png)
+![Illustration 07_routeur-routes_statiques](/assets/development/07_routeur-routes_statiques.png)
 
 ## Routes dynamiques
 
@@ -255,14 +255,14 @@ public function exemple( $item1, $item2, $item3, $req ){
 }
 ```
 
-À noter que les noms des paramètres d’entrée ne doivent pas obligatoirement porter le même nom que celui défini dans votre fichier de routes, mais il est plus facile de s'y retrouver si les noms sont identiques.
+À noter que les noms des paramètres d’entrée ne doivent pas obligatoirement porter le même nom que celui défini dans votre fichier de routes, mais il est plus facile de s’y retrouver si les noms sont identiques.
 
 Vérifions que vos fonctions soient bien appelées et que l’item soit bien le même que celui dans l’URL.
 
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/item/2/edit](http://127.0.0.1/soosyze/?todo/item/2/edit).
 Le résultat est censé être : 
 
-![Illustration 07_routeur-routes_dynamiques](https://soosyze.com/assets/development/07_routeur-routes_dynamiques.png)
+![Illustration 07_routeur-routes_dynamiques](/assets/development/07_routeur-routes_dynamiques.png)
 
 Au final, votre fichier des routes doit ressembler à ça :
 
@@ -364,4 +364,4 @@ class TodoController extends \Soosyze\Controller
 }
 ```
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/07_routeur).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/07_routeur).

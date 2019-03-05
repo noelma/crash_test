@@ -9,7 +9,7 @@ Dans un premier temps, nous analyserons le développement d’un module typique 
 
 Le module d’exemple permet de créer une "to do list", donnant la possibilité de gérer une liste de tâches. Il permet :
 
-* D'accéder à un formulaire de création, d’édition et de suppression des items de la liste (*uniquement accessible par l'administrateur*),
+* D’accéder à un formulaire de création, d’édition et de suppression des items de la liste (*uniquement accessible par l’administrateur*),
 * De hiérarchiser les tâches,
 * À tous les utilisateurs de voir cette liste.
 

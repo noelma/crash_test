@@ -6,15 +6,15 @@ Avant tout, vous devez posséder un certain nombre d’outils pour être en mesu
 
 Je vous conseille de réaliser votre développement sur un serveur local, afin de sécuriser au mieux de votre projet.
 
-Si vous utilisez Windows comme système d’exploitation, il existe plusieurs logiciels "tout-en-un". Pour ce tutoriel, j'ai utilisé le logiciel [WampServeur 3](http://www.wampserver.com/). WAMP signifie :
+Si vous utilisez Windows comme système d’exploitation, il existe plusieurs logiciels "tout-en-un". Pour ce tutoriel, j’ai utilisé le logiciel [WampServeur 3](http://www.wampserver.com/). WAMP signifie :
 
-* **W**indows (*votre système d'exploitation)*,
+* **W**indows (*votre système d’exploitation)*,
 * **A**pache (*votre serveur HTTP*),
-* **M**ySQL (*logiciel de base de données, qui n'est pas obligatoire pour Soosyze*),
+* **M**ySQL (*logiciel de base de données, qui n’est pas obligatoire pour Soosyze*),
 * **P**HP (*le langage de développement utilisé pour Soosyze*).
 
 Je ne peux que vivement vous le conseiller...
-Si votre choix se porte sur cet outil, je vous invite à lire notre [documentation d'installation](/user/00_héberger.md).
+Si votre choix se porte sur cet outil, je vous invite à lire notre [documentation d’installation](/user/00_héberger.md).
 
 ## Outils de développement
 
@@ -32,12 +32,12 @@ Vous pouvez également utiliser un IDE (*Environnement De Développement*), qui 
 
 Je vous invite également à vous munir des outils PHP suivants :
 
-* [Composer](https://getcomposer.org/), qui permet d'installer les dépendances,
+* [Composer](https://getcomposer.org/), qui permet d’installer les dépendances,
 * [PHP Coding Standfards Fixer](http://cs.sensiolabs.org/), qui nettoie et standardise votre code.
 
 ## Outils bonus
 
-Je vous partage également une partie des outils utilisés pour le développement du framework et de la bibliothèque NoSQL. Ils ne vous seront d'aucune utilité pour ce tutoriel, mais si ça vous intéresse, les voici :
+Je vous partage également une partie des outils utilisés pour le développement du framework et de la bibliothèque NoSQL. Ils ne vous seront d’aucune utilité pour ce tutoriel, mais si ça vous intéresse, les voici :
 
 * [phpDocumentor](https://www.phpdoc.org/), qui génère une documentation à partir des commentaires du code,
 * [phpMetrics](https://www.phpmetrics.org/), qui génère un rapport sur la qualité du code,
@@ -45,7 +45,7 @@ Je vous partage également une partie des outils utilisés pour le développemen
 
 ## Activer le mode débug
 
-Dernière mise en place, activer le mode débug. Il vous permet d'afficher les érreurs éventuelles dans votre code. Rendez-vous à la racine de votre projet et éditez le fichier `index.php` et décommanter la ligne suivante :
+Dernière mise en place, activer le mode débug. Il vous permet d’afficher les érreurs éventuelles dans votre code. Rendez-vous à la racine de votre projet et éditez le fichier `index.php` et décommanter la ligne suivante :
 
 ```php
 <?php
@@ -55,7 +55,7 @@ define('ROOT', dirname(__FILE__) . DS);
 define('MODULES_CORE', ROOT . 'core' . DS . 'modules' . DS);
 define('MODULES_CONTRIBUED', ROOT . 'app' . DS . 'modules' . DS);
 
-/* Décommenter la ligne pour autoriser l'affichage des erreurs. */
+/* Décommenter la ligne pour autoriser l’affichage des erreurs. */
 $config[ 'debug' ] = true;
 require_once 'bootstrap/requirements.php';
 require_once 'bootstrap/debug.php';

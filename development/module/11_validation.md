@@ -9,7 +9,7 @@ Dans la majorité des cas, pour valider les données d’un formulaire nous fais
 
 Par exemple, pour que les champs **Item** de notre formulaire soient valides, il faut :
 
-* Que l'item existe, 
+* Que l’item existe, 
 * Que la valeur de son titre soit une chaîne de caractères,
 * Et que la chaîne ne dépasse pas 255 caractères.
 
@@ -158,7 +158,7 @@ Pour rappel, les variables de session peuvent conserver des données d’une pag
 ```php
 /* Nous demandons au validator si la valeur fournie correspond aux règles. */
 if ($validator->isValid()) {
-    /* Enregistrement d'un message de succès. */
+    /* Enregistrement d’un message de succès. */
     $_SESSION[ 'success' ] = [ 'Votre configuration a été enregistrée.' ];
 } else {
     /* Enregistrement des messages d’erreurs et de la valeur des champs. */
@@ -170,7 +170,7 @@ if ($validator->isValid()) {
 }
 ```
 
-Enfin, il faut renvoyer l’utilisateur sur la page d’ajout en cas d'erreur, ou bien le conduire sur la page index si les données sont valides.
+Enfin, il faut renvoyer l’utilisateur sur la page d’ajout en cas d’erreur, ou bien le conduire sur la page index si les données sont valides.
 
 ```php
 public function store( $req )
@@ -214,7 +214,7 @@ if (isset($_SESSION[ 'inputs' ])) {
 }
 ```
 
-Pour le surlignage des champs et l’affichage des messages en cas d'erreur, le composant `FormBuilder` nous propose les fonctions suivantes :
+Pour le surlignage des champs et l’affichage des messages en cas d’erreur, le composant `FormBuilder` nous propose les fonctions suivantes :
 
 ```php
 /* Fournit au formulaire une variable ou un tableau pour les messages de succès. */
@@ -231,7 +231,7 @@ Nous allons modifier le formulaire une fois généré pour :
 * Ajouter nos messages d’erreur ou de succès.
 
 ```php
-/* Si le formulaire n'est pas valide. */
+/* Si le formulaire n’est pas valide. */
 if (isset($_SESSION[ 'errors' ])) {
     /* Ajout des messages. */
     $form->addErrors($_SESSION[ 'errors' ]);
@@ -295,7 +295,7 @@ public function create( $req )
         ->token()
         ->submit('submit', 'Enregistrer', [ 'class' => 'btn btn-success' ]);
         
-    /* Si le formulaire n'est pas valide. */
+    /* Si le formulaire n’est pas valide. */
     if (isset($_SESSION[ 'errors' ]))
     {
         /* Ajout des messages. */
@@ -457,7 +457,7 @@ public function edit( $id, $req )
         ->token()
         ->submit('submit', 'Enregistrer', [ 'class' => 'btn btn-success' ]);
             
-    /* Si le formulaire n'est pas valide. */
+    /* Si le formulaire n’est pas valide. */
     if (isset($_SESSION[ 'errors' ]))
     {
         /* Ajout des messages. */
@@ -521,4 +521,4 @@ La correction du template `form-todo-item-edit.php` :
 </div>
 ```
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/11_validation).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/11_validation).

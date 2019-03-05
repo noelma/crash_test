@@ -192,7 +192,7 @@ public function store($req)
 }
 ```
 
-Vous noterez la présence de l’appel `todo.item.store.before` juste après l’insertion. Dans notre cas, cet appel ne nous sert à rien. Mais imaginez qu’un développeur veuille créer une liaison entre cet item et une autre table : il aura besoin que l’item soit déjà inséré, c'est pourquoi il est important d’avoir les deux appels.
+Vous noterez la présence de l’appel `todo.item.store.before` juste après l’insertion. Dans notre cas, cet appel ne nous sert à rien. Mais imaginez qu’un développeur veuille créer une liaison entre cet item et une autre table : il aura besoin que l’item soit déjà inséré, c’est pourquoi il est important d’avoir les deux appels.
 
 Maintenant que les appels sont déclarés, nous pouvons créer des hooks pour intervenir sur le formulaire et la validation des données.
 
@@ -341,7 +341,7 @@ Et comme nous venons de modifier le schéma, il faut aussi modifier la structure
 ]
 ```
 
-Maintenant que notre environnement de travail est prêt, il nous reste plus qu'à déclarer notre nouveau module à l’application avant de nous mettre au travail.
+Maintenant que notre environnement de travail est prêt, il nous reste plus qu’à déclarer notre nouveau module à l’application avant de nous mettre au travail.
 
 Mais comme nous sommes à 7 chapitres d’écart de celui qui explique comment déclarer un module manuellement, je vais vous faire une fleur en vous rafraîchissant un peu la mémoire. ^^ 
 
@@ -492,7 +492,7 @@ public function hookCreateForm(&$form, $data)
 Vérifions que nos fonctions renvoient bien notre formulaire d’ajout d’item avec le nouveau champ. 
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/item](http://127.0.0.1/soosyze/?todo/item).
 
-![Illustration 14_hooks](https://soosyze.com/assets/development/14_hooks.png)
+![Illustration 14_hooks](/assets/development/14_hooks.png)
 
 Et voilà, c’est aussi simple que ça. ^^
 
@@ -692,11 +692,11 @@ class TodoHook
 Maintenant, à vous de tester le bon fonctionnement de ce nouveau champ. 
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/item/1/edit](http://127.0.0.1/soosyze/?todo/item/1/edit), remplissez la date et cliquez sur **_Enregistrer_**.
 
-![Illustration 14_hooks-correction_edition_d_item](https://soosyze.com/assets/development/14_hooks-correction_edition_d_item.png)
+![Illustration 14_hooks-correction_edition_d_item](/assets/development/14_hooks-correction_edition_d_item.png)
 
 Après avoir fini d’écrire ce chapitre sur les hooks, je vous dirais que l’utilisation des services `query` et `schema` ne sont pas vraiment utiles dans le cas du module TodoDate (*vous le constaterez dans la chapitre suivant*). 
 Effectivement, nous vérifions la présence de la table todo avant chaque opération, en nous assurant de l’existence de la "to do list". Mais en réalité, je dirais même que ces deux services sont du code mort car nous ne les utilisons plus vraiment (*pas d’insertion, d’édition ou de suppression de données*).
 
 Mais lorsque vous developperez votre propre module et que vous aurez des opération en base de données, vous comprendrez rapidement que l’utilisation de ces deux services est indispenssable.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/14_hooks).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/14_hooks).

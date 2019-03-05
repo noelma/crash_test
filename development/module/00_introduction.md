@@ -5,7 +5,7 @@ Sans base de données, à travers un système d’administration simple et avec 
 
 De nombreux CMS existent (*Wordpress, Joomla, Drupal, Ez-publich, Spip…*), souvent très complexes. Ils peuvent être difficiles à appréhender pour les non-initiés et demandent beaucoup de ressources pour mettre en place un simple site.
 
-SoosyzeCMS utilise le qualificatif **micro**, car il implémente uniquement les fonctionnalités essentielles à la gestion d'un site. D’autres micro CMS sans base de données existent. Ils sont aussi créés par des passionnés du développement web (*un peu comme moi ^^*). Après en avoir utilisé quelques-uns, j’ai voulu proposer ma vision du CMS. 
+SoosyzeCMS utilise le qualificatif **micro**, car il implémente uniquement les fonctionnalités essentielles à la gestion d’un site. D’autres micro CMS sans base de données existent. Ils sont aussi créés par des passionnés du développement web (*un peu comme moi ^^*). Après en avoir utilisé quelques-uns, j’ai voulu proposer ma vision du CMS. 
 
 Basé sur **SoosyzeFramework** (*un micro framework MVC en PHP orienté objet*) et **Queryflatfile** (*une bibliothèque noSQL*), la combinaison des deux outils offre un socle solide au développement :
 
@@ -19,7 +19,7 @@ Basé sur **SoosyzeFramework** (*un micro framework MVC en PHP orienté objet*) 
 * Contrôleur,
 * Query Builder,
 * Configuration et paramétrage,
-* Détection d'environnement,
+* Détection d’environnement,
 * Hook,
 * Composant d’aide au développement :
     * Création de formulaire dynamique,

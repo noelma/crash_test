@@ -58,7 +58,7 @@ public function create( $req )
 Vérifions que notre fonction renvoie bien notre formulaire d’ajout d’items.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/item](http://127.0.0.1/soosyze/?todo/item).
 
-![Illustration 10_formulaire-formulaire_simple](https://soosyze.com/assets/development/10_formulaire-formulaire_simple.png)
+![Illustration 10_formulaire-formulaire_simple](/assets/development/10_formulaire-formulaire_simple.png)
 
 Dans les cas simples (*petite application, page simple…*), je vous recommande de créer votre formulaire en brut dans un template et de l’appeler directement, comme nous l’avons fait.
 
@@ -236,7 +236,7 @@ L’utilisation des formulaires dynamiques apporte une très grande souplesse da
 
 * Injecter des données dans les champs à partir d’une base de données,
 * Générer tout un formulaire à partir de données stockées en base, compléter les fonctionnalités sans disperser les interfaces,
-* Ajouter des champs à un formulaire d'un module-A depuis un module-B.
+* Ajouter des champs à un formulaire d’un module-A depuis un module-B.
 
 Pour rendre votre formulaire totalement dynamique, il doit être généré entièrement côté contrôleur, c’est-à-dire :
 
@@ -378,7 +378,7 @@ Les seuls points divergeants sont :
 * L’injection de données dans le formulaire,
 * Le changement de template : bien qu’identiques, séparer les templates permet une découpe plus aisée en cas de surcharge de l’interface.
 
-Comme vous n'utilisez pas de base de données pour le moment, je vous fournis une fonction à ajouter dans votre contrôleur pour simuler la récupération d’un élément de la liste via son identifiant :
+Comme vous n’utilisez pas de base de données pour le moment, je vous fournis une fonction à ajouter dans votre contrôleur pour simuler la récupération d’un élément de la liste via son identifiant :
 
 ```php
 # modules/TodoModule/Controller/TodoController.php
@@ -479,13 +479,13 @@ Et le template `form-todo-item-add.php` :
 Vérifions que notre fonction renvoie bien notre formulaire d’édition d’item.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/item/1/edit](http://127.0.0.1/soosyze/?todo/item/1/edit).
 
-![Illustration 10_formulaire-correction_formulaire_d_edition](https://soosyze.com/assets/development/10_formulaire-correction_formulaire_d_edition.png)
+![Illustration 10_formulaire-correction_formulaire_d_edition](/assets/development/10_formulaire-correction_formulaire_d_edition.png)
 
 Vous pouvez également vérifier si une erreur 404 est levée, dans le cas où l’URL pointe sur un item non existant.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/item/4/edit](http://127.0.0.1/soosyze/?todo/item/4/edit).
 
-![Illustration 10_formulaire-404.png](https://soosyze.com/assets/development/10_formulaire-404.png)
+![Illustration 10_formulaire-404.png](/assets/development/10_formulaire-404.png)
 
 Comme votre module fonctionne sur le CMS, il renvoie par défaut sa page 404. Si on avait utilisé un framework, le message aurait été affiché dans l’objet `Response`.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/10_formulaire).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/10_formulaire).

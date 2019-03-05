@@ -34,7 +34,7 @@ $container->has('myService');
 
 ## Utiliser un service
 
-SoosyzeFramework fournit l’instance du Container à chaque contrôleur, vous permettant d'utiliser ses services dans chacun de vos modules. De plus, il fournit 3 services de bases : 
+SoosyzeFramework fournit l’instance du Container à chaque contrôleur, vous permettant d’utiliser ses services dans chacun de vos modules. De plus, il fournit 3 services de bases : 
 
 * Le service `core` pour utiliser les méthodes du cœur de votre application, 
 * Le service `config` pour récupérer des valeurs dans les fichiers de configuration, 
@@ -250,6 +250,6 @@ class Todo
 L’ordre de déclaration de l’injection doit suivre l’ordre d’appel du constructeur. 
 
 Il s’agit d’un exemple d’utilisation de l’injection d’argument et de service, vous pouvez ainsi tester la récupération de ces données pour mieux en comprendre le fonctionnement. 
-Ces attributs n'ont pas d’utilité pour le reste du tutoriel, je vous invite à les supprimer à l'issue de votre test. Mais ne vous en faites pas, nous utiliserons l’injection dans un cas bien plus utile dans le chapitre suivant.
+Ces attributs n’ont pas d’utilité pour le reste du tutoriel, je vous invite à les supprimer à l’issue de votre test. Mais ne vous en faites pas, nous utiliserons l’injection dans un cas bien plus utile dans le chapitre suivant.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/12_container_services).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/12_container_services).

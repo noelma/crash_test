@@ -5,7 +5,7 @@ Comme précisé dans l’introduction, SoosyzeCMS est basé sur SoosyzeFramework
 Pour vulgariser le fonctionnement d’une architecture MVC, prenons l’exemple suivant :
 En appelant l’URL de votre site, un utilisateur va déclencher  :
 
-* Un **contrôleur**, qui est la logique de l’application, il exécutera un code permettant d'appeler :
+* Un **contrôleur**, qui est la logique de l’application, il exécutera un code permettant d’appeler :
 * Un **model**, qui représente vos données (*en base de données, en fichier, en tableau…*). Ces données seront retournées à votre contrôleur qui appellera ensuite :
 * Une **Vue**, qui met en forme vos données (*pour l’afficher en HTML, en JSON, en texte…*).
 
@@ -22,7 +22,7 @@ Dans le répertoire `TodoModule/Config`, créez un fichier `routing.json` avec l
 }
 ```
 
-Le fichier `routing.json` contiendra toutes les routes du module et exécutera un contrôleur si l’URL appelée est la bonne. Dans notre cas, cela déclenchera la méthode  `index()` , à condition que l'utilisateur ait appelé l'URL suivante : `?todo/index`.
+Le fichier `routing.json` contiendra toutes les routes du module et exécutera un contrôleur si l’URL appelée est la bonne. Dans notre cas, cela déclenchera la méthode  `index()` , à condition que l’utilisateur ait appelé l’URL suivante : `?todo/index`.
 
 La seconde étape est de créer le contrôleur : rendez-vous dans le répertoire `TodoModule/Controller` puis créez un fichier `TodoController.php` avec le code suivant :
 
@@ -114,7 +114,7 @@ class Core extends App
 }
 ```
 
-Sans trop entrer dans les détails, le fichier `app_core.php` contient l'objet `Core` qui permet de surcharger l’objet `App` de SoosyzeFramework pour définir quels modules doivent être utilisés.
+Sans trop entrer dans les détails, le fichier `app_core.php` contient l’objet `Core` qui permet de surcharger l’objet `App` de SoosyzeFramework pour définir quels modules doivent être utilisés.
 
 La fonction `loadModules()` permet de sélectionner manuellement les modules à utiliser (*utile dans les cas où nous développons un module*).
 La fonction `loadServices()` est celle qui ajoutera les services de base.
@@ -122,8 +122,8 @@ La fonction `loadServices()` est celle qui ajoutera les services de base.
 Il est temps de tester votre premier module : ouvrez un navigateur web et entrez l’URL suivante : [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/soosyze/?todo/index).
 Le résultat est censé être : 
 
-![Illustration 06_hello_world](https://soosyze.com/assets/development/06_hello_world.png)
+![Illustration 06_hello_world](/assets/development/06_hello_world.png)
 
 Et voilà, votre premier module est fonctionnel ! Dans le prochain chapitre, nous allons analyser en détail le système des routes.
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/06_hello_world).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/06_hello_world).

@@ -49,7 +49,7 @@ Donc, quand une route appelle la méthode d’un contrôleur, un objet `Request`
 * Le corps du message,
 * Les données contenues dans `$_SERVEUR`, `$_COOKIE`, `$_GET`, `$_POST`, `$_FILE`.
 
-Jusqu’à présent, le retour n'était qu'une simple chaîne de caractère. L’utilisation de l’objet `Response` permet de spécifier d’autres informations, telles que :
+Jusqu’à présent, le retour n’était qu’une simple chaîne de caractère. L’utilisation de l’objet `Response` permet de spécifier d’autres informations, telles que :
 
 * Le type de données retournées (*HTML, texte, JSON…*),
 * Le code de retour de la réponse (*200 = OK ; 301 = Fichier déplacé de façon permanente ; 400 = Erreur dans la requête…*),
@@ -131,7 +131,7 @@ Vérifions que la fonction retourne bien du JSON.
 Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/soosyze/?todo/index).
 Le résultat est censé être : 
 
-![Illustration 08_controleur-restful.png](https://soosyze.com/assets/development/08_controleur-restful.png)
+![Illustration 08_controleur-restful.png](/assets/development/08_controleur-restful.png)
 
 ## Redirect
 
@@ -166,4 +166,4 @@ class TodoController extends \Soosyze\Controller
 }
 ```
 
-Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](https://github.com/soosyze/documentations/development/module/src/08_controleur).
+Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/development/module/src/08_controleur).

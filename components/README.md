@@ -1,8 +1,8 @@
-# Composants
+# Components
 
 * Email
-* [FormBuilder](#formebuilder)
+* [FormBuilder](/components/formbuilder.md)
 * Http
 * Template
 * Util
-* [Validator](#validator)
+* [Validator](/components/validator.md)
