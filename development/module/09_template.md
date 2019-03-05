@@ -1,4 +1,4 @@
-﻿# Template
+# Template
 
 Un template est par définition un schéma d’affichage. Il emploiera des variables ou d’autres templates pour composer un affichage cohérent.
 
@@ -278,6 +278,7 @@ Rendez-vous sur l’URL [http://127.0.0.1/soosyze/?todo/index](http://127.0.0.1/
 ## Exercice page d’administration
 
 Maintenant, je vous propose un exercice assez simple : créer une page d’administration pour la "to do list". Vous devez donc modifier la fonction `admin()` pour renvoyer une page contenant :
+
 * Un tableau listant tous les items :
   * Une colonne pour le titre,
   * Une colonne pour les actions (*bouton éditer et supprimer*),
@@ -379,6 +380,7 @@ Vous pouvez retrouver les sources de ce chapitre en suivant ce [lien](/developme
 ## Bonus lexical 
 
 En écrivant cette documentation, je me suis rendu compte que nous pouvions facilement nous y perdre, dans le champ lexical de ce chapitre (template, vue, bloc, sous-template...). Bref, voici un petit rappel pour conclure : 
+
 * **Un template** (*dans notre cas*) est un object content plusieurs informations pour l’affichage d’une vue. Il contient le chemin et le fichier de la vue, des variables et des blocs. (*NDLR : après plusieurs recherches, on dit bien "un" et non "une" template, car sa traduction signifie "un modèle". Cependant, libre à vous de choisir votre déternimant, mais ne vous attardez pas sur ce genre de détail...*) 
 * **Une vue**, c’est le fichier que la template va appeler pour la mise en forme des données. Elle peut contenir des variables, mais aussi des blocs. 
 * **Une variable**, comme son nom l’indique, est une donnée variable (CQFD). Il peut s’agir d’une chaîne de caractères, du nombre inclus dans un tableau, d’un objet... . Cet élément sert à afficher dynamiquement des données dans les vues. 

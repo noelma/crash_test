@@ -23,6 +23,7 @@ L'architecture fournie par le service `template` :
 ![Illustration 15_integration-theme](/assets/development/15_integration-theme.png)
 
 Pour appréhender cette architecture, il faut comprendre qu’il existe déjà un template principal par défaut (*html.php*) contenant des variables et des blocs (*pour rappel, un bloc contient un sous-template*) contenant des variables, des blocs, etc. :
+
 * Un premier bloc **html.php** contenant :
 * Des variables :
   * $title,
@@ -265,6 +266,7 @@ class Install
 ```
 
 Bon, quelques explications s’imposent sur ces nouvelles fonctions :
+
 * `->createTableIfNotExists( $table, callable $callback = null );` nous permet de créer une table si elle n’existe pas. Elle prend en premier paramètre le nom de la table et en second un callback fournissant l’objet TableBuilder pour construire les champs de la table :
   * `->increments('id')` : un identifiant de type incrémental, 
   * `->string('title')` : un titre de type chaîne de caractères, 
@@ -319,7 +321,6 @@ La correction du fichier `config.json` du module `TodoDate` :
 ```
 
 La correction du fichier `Install.php` du module `TodoDate` :
-
 
 ```php
 <?php

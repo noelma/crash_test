@@ -1,6 +1,7 @@
-﻿# Conclusion 
+# Conclusion 
 
 Vous voilà à la fin de ce tutoriel, en espérant que vous compreniez mieux le fonctionnement de SoosyzeCMS. Cependant, le module que nous avons développé à travers ces lignes ne sont qu’une ébauche de module, je vous invite à continuer votre apprensissage en développant votre propre module ou à poursuivre le développement de TodoModule. Je vous propose aussi d’imaginer quelles fonctionnalités pourraient venir enrichir notre module, et voici quelques pistes : 
+
 * Pouvoir créer, éditer et supprimer plusieurs listes, 
 * Pouvoir archiver une liste sans la supprimer, 
 * Ajouter des tags aux items, 

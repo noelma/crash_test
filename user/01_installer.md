@@ -65,7 +65,7 @@ C’est maintenant que nous allons les utiliser :
 7. Une nouvelle fenêtre s’ouvrira : renseignez le mot de passe puis validez.
 
 
-![Screen FileZilla et gestionnaire de sites](https://soosyze.com/assets/user/filezilla.png)
+![Screen FileZilla et gestionnaire de sites](/assets/user/filezilla.png)
 
 Vous voilà connecté à votre serveur :
 8. Décompressez l’archive de Soosyze CMS, 
@@ -84,6 +84,6 @@ Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur we
 
 La page suivante se présentera à vous. Remplissez tous les champs et cliquez sur **_Installer_**.
 
-![Screenshot de la page d’instalaltion de SoosyzeCMS](https://soosyze.com/assets/files/screen/install-desktop.png)
+![Screenshot de la page d’instalaltion de SoosyzeCMS](/assets/user/install-desktop.png)
 
 Et voilà, le CMS est installé.

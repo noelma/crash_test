@@ -1,4 +1,4 @@
-﻿# Modèle
+# Modèle
 
 Voilà l’une des parties les plus importantes du tutoriel. Jusque là, nous avons abordé la construction de Contrôleur et de Views. Il nous reste à mettre en œuvre la dernière partie de l’architecture MVC, à savoir le Modèle. 
 
@@ -7,6 +7,7 @@ Pour rappel, le modèle a pour objectif de manipuler les données (*globalement 
 ## SGBD
 
 SoosyzeFramewok a fait le choix de ne pas imposer un SGBD (*Système de Gestion Base de Données*). Libre à vous de voir comment vous allez interagir avec vos données. La façon la plus simple pour vous est de créer un service avec : 
+
 * Une fonction pour la connexion à la base de données, 
 * Une fonction pour la construction de requête, 
 * Et une fonction pour le retour de vos données.

@@ -2,7 +2,7 @@
 
 Après l’installation de votre site, vous êtes redirigés vers la page d’accueil par défaut de votre site. Pour configurer votre site, vous devez d’abord vous connecter.
 
-![Screenshot de la page d’accueil de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-accueil-desktop.png)
+![Screenshot de la page d’accueil de SoosyzeCMS](/assets/user/soosyze-accueil-desktop.png)
 
 ## Configurer l’utilisateur
 
@@ -12,7 +12,7 @@ Pour accéder au formulaire de connexion, cliquer sur le lien **_Connexion_** da
 
 `GET ?user/login`
 
-![Screenshot de la page de connexion de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-user_login-desktop.png)
+![Screenshot de la page de connexion de SoosyzeCMS](/assets/user/soosyze-user_login-desktop.png)
 
 Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’installation dans les champs correspondants, puis cliquez sur **_Valider_**. 
 
@@ -21,7 +21,7 @@ Saisissez votre e-mail et le mot de passe que vous avez choisi lors de l’insta
 
 `GET ?user/1`
 
-![Screenshot de la page de profil utilisateur de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-user_show-desktop.png)
+![Screenshot de la page de profil utilisateur de SoosyzeCMS](/assets/user/soosyze-user_show-desktop.png)
 
 ### Configuer votre compte utilisateur
 
@@ -29,7 +29,7 @@ Une fois connecté, cliquez sur l’onglet **_Utilisateur_** de votre menu d’a
 
 `GET ?user/1/edit`
 
-![Screenshot de la page d’edition de l’utilisateur de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-user_edit-desktop.png)
+![Screenshot de la page d’edition de l’utilisateur de SoosyzeCMS](/assets/user/soosyze-user_edit-desktop.png)
 
 Vous pouvez modifier les informations y figurant. La modification de votre mot de passe doit cependant être confirmée dans les champs situés juste en dessous.
 
@@ -39,7 +39,7 @@ Si vous avez oublié votre mot de passe, cliquez sur le lien **_Mot de passe per
 
 `GET ?user/relogin`
 
-![Screenshot de la page de demande de nouveau mot de passe de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-user_relogin-desktop.png)
+![Screenshot de la page de demande de nouveau mot de passe de SoosyzeCMS](/assets/user/soosyze-user_relogin-desktop.png)
 
 Vous recevrez un e-mail vous donnant la marche à suivre pour changer votre mot de passe.
 
@@ -49,7 +49,7 @@ Pour vous rendre au panneau de configuration, cliquez sur le lien **_Configurati
 
 `GET ?admin/config`
 
-![Screenshot de la page de configuration de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-configuration-desktop.png)
+![Screenshot de la page de configuration de SoosyzeCMS](/assets/user/soosyze-configuration-desktop.png)
 
 1. **E-mail du site** : mail utilisé pour la configuration générale, pour vos contacts (*pour la récupération de votre mot de passe...*),
 2. **Mettre le site en maintenance** : empêche les utilisateurs non connectés d’accéder à votre site,
@@ -72,7 +72,7 @@ Pour accéder à la page de vos modules, cliquez sur le lien **_Modules_** dans 
 
 `GET ?admin/modules`
 
-![Screenshot de la page d’e gestion des modules de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-modules-desktop.png)
+![Screenshot de la page d’e gestion des modules de SoosyzeCMS](/assets/user/soosyze-modules-desktop.png)
 
 Un module **requis** signifie que ce module est utilisé par un autre module déja actif.
 

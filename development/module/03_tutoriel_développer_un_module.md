@@ -1,4 +1,4 @@
-﻿# Tutoriel pour développer un module
+# Tutoriel pour développer un module
 
 SoosyzeCMS se base sur SoosyzeFramework, chaque fonctionnalité est découpée dans un module correspondant.
 Un module remplit un rôle ou une fonction (*gestion du contenu, des menus, des utilisateurs…*).

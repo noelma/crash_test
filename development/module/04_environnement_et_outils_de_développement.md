@@ -1,4 +1,4 @@
-﻿# Environnement et outils de développement
+# Environnement et outils de développement
 
 Avant tout, vous devez posséder un certain nombre d’outils pour être en mesure suivre ce tutoriel.
 

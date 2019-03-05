@@ -1,4 +1,4 @@
-﻿# Introduction
+# Introduction
 
 SoosyzeCMS est un micro gestionnaire de contenus en ligne, appelé aussi micro CMS (*Content Manager System*).
 Sans base de données, à travers un système d’administration simple et avec un passif d’apprentissage quasi nul, vous pourrez créer votre site facilement.

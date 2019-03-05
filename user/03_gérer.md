@@ -19,7 +19,7 @@ Rendez-vous sur la page de gestion de vos contenus en cliquant sur le lien **_Co
 
 `GET ?admin/content`
 
-![Screenshot de la page de gestion des contenus de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-node_index-desktop.png)
+![Screenshot de la page de gestion des contenus de SoosyzeCMS](/assets/user/soosyze-node_index-desktop.png)
 
 ### Créer du contenu
 
@@ -29,7 +29,7 @@ Vous serez redirigé à la page des types de contenus. Par défaut vous avez le 
 
 `GET ?node/add`
 
-![Screenshot de la page des types de contenu de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-node_add-desktop.png)
+![Screenshot de la page des types de contenu de SoosyzeCMS](/assets/user/soosyze-node_add-desktop.png)
 
 Cliquez sur le titre de l’un d’entre eux pour accéder au formulaire de création.
 
@@ -62,7 +62,7 @@ Une fois les modifications apportées, cliquez sur **_Enregistrer_** en bas de l
 
 `GET ?menu/main-menu`
 
-![Screenshot de la page de gestion des menu de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-menu_show-desktop.png)
+![Screenshot de la page de gestion des menu de SoosyzeCMS](/assets/user/soosyze-menu_show-desktop.png)
 
 ### Créer un lien
 
@@ -72,7 +72,7 @@ Vous serez redirigé vers le formulaire d’ajout de lien. Remplissez les champs
 
 `GET ?menu/main-menu/link/add`
 
-![Screenshot de la page d’ajout de lien de menu de SoosyzeCMS](https://soosyze.com/assets/user/soosyze-menu_link_create-desktop.png)
+![Screenshot de la page d’ajout de lien de menu de SoosyzeCMS](/assets/user/soosyze-menu_link_create-desktop.png)
 
 ### Modifier un lien
 

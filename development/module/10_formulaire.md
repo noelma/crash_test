@@ -1,4 +1,4 @@
-﻿# Formulaire
+# Formulaire
 
 Pour pouvoir gérer une "to do list", nous allons avoir besoin d’un formulaire pour l’ajout et l’édition des éléments de la liste.
 Nous avons besoin d’un champ texte pour l’intitulé, d’un champ numérique pour la position, d’une checkbox pour savoir si la tâche est réalisée et d’un bouton de validation.
@@ -32,6 +32,7 @@ Rendez-vous dans le répertoire `TodoModule\Views` et créez un fichier `form-it
     </div>
 </div>
 ```
+
 * Notre formulaire enverra ses données en `POST` à la fonction `store()` via la route `?todo/item`,
 * Le premier champ de type texte sera utilisé pour créer l’intitulé des tâches de la liste,
 * Le second champ de type numérique permet d’ordonner les tâches dans la liste,
@@ -365,7 +366,6 @@ Cette méthode générera un code HTML semblable à celui-ci :
 ```html
 <input name="token" type="hidden" value="261525b507996dcd958.39126826">
 ```
-
 
 ## Exrecice formulaire d’édition
 

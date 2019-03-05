@@ -1,4 +1,4 @@
-﻿# Structure du CMS
+# Structure du CMS
 
 ```
 www/
@@ -49,6 +49,7 @@ www/
 ```
 
 Le répertoire `app` contient l’ensemble de la configuration de votre application :
+
 * `app/config` : les fichiers de paramétrage,
 * `app/data`  : les données de votre site au format JSON (*format par défaut*),
 * `app/files` : les ressources multimédia téléversées depuis votre site,
@@ -56,11 +57,13 @@ Le répertoire `app` contient l’ensemble de la configuration de votre applicat
 * `app/themes` : les thèmes contributeurs (*uniquement dans SoosyzeCMS*),
 * `app/app_core.php` : le script de votre application (*les modules utilisés par SoosyzeCMS*).
 
-Le répértoire `core` contient l’ensemble du code source : 
+Le répértoire `core` contient l’ensemble du code source :
+
 * `core/modules` : l’ensemble de la logique de votre site,
 * `core/themes` : les thèmes de base du CMS.
 
 Le répertoire `vendor` contient toutes les bibliothèques nécessaires au bon fonctionnement de l’application :
+
 * `ircmaxell/password-compat` : la bibliothèque qui permet de hasher les mots de passe en version 5.4 de PHP,
 * `psr/container` : l’interface pour le CID [![PSR-11](https://img.shields.io/badge/PSR-11-yellow.svg)](https://www.php-fig.org/psr/psr-11 "Container Interface"),
 * `psr/http-message` : l’interface pour les objets Request, Response, Message, Uri… [![PSR-7](https://img.shields.io/badge/PSR-7-yellow.svg)](https://www.php-fig.org/psr/psr-7 "HTTP Message Interface"),

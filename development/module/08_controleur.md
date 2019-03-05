@@ -1,4 +1,4 @@
-﻿# Contrôleur
+# Contrôleur
 
 Lors des précédents chapitres, vous avez pu remarquer que le contrôleur héritait de `\Soosyze\Controller` :
 

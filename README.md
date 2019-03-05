@@ -1,3 +1,5 @@
+<p align="center"><a href="https://soosyze.com/" rel="noopener" target="_blank"><img src="https://soosyze.com/assets/files/logo/soosyze-name.png"></a></p>
+
 # Documentation Soosyze
 
 * [Site](https://soosyze.com)
@@ -12,7 +14,7 @@
 * [Configurer](user/02_configurer.md)
 * [Gérer](user/03_gérer.md)
 
-# Guide de développement de SoosyzeCMS
+## Guide de développement de SoosyzeCMS
 
 * [Introduction](development/module/00_introduction.md)
 * [Installation et configuration](development/module/01_installation_et_configuration.md)
@@ -120,11 +122,11 @@
 ## Composants
 
 * Email
-* [FormBuilder](components/formbuilder.md)
+* FormBuilder
 * Http
 * Template
 * Util
-* [Validator](components/validator.md)
+* Validator
 
 ## FAQ
 

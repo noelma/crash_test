@@ -1,4 +1,4 @@
-﻿# Installation et Configuration
+# Installation et Configuration
 
 ## Exigences d’installation
 
@@ -41,12 +41,14 @@ Soosyze (*hors modules contributeurs*) nécessite 16MB de mémoire.
 ### Navigateurs supportés
 
 Le thème de base ainsi que celui d’administration sont réalisés avec le framework Bootstrap 3 :
+
 * [Navigateurs supportés](https://getbootstrap.com/docs/3.3/getting-started/#desktop-browsers),
 * [Navigateurs mobiles supportés](https://getbootstrap.com/docs/3.3/getting-started/#mobile-devices).
 
 ### Connexion à internet
 
 Le thème de base ainsi que celui d’administration se déchargent d’une partie des bibliothèques d’affichage (*front-end*) en faisant appel à des CND (*Content delivery network*) :
+
 * Bootstrap 3.3.7,
 * JQuery 3.2.1,
 * JQuery UI 1.12.0.
@@ -62,6 +64,7 @@ Pour installer la version de production de SoosyzeCMS, il faudra télécharger e
 ### Téléchargement via Git & Composer
 
 Pour installer la version de développement de SoosyzeCMS, sont requis :
+
 * Un serveur HTTP (*en ligne ou en local*) comme [Apache](http://httpd.apache.org/download.cgi) ou [Ngnix](https://nginx.org/en/download.html),
 * L’outil de versionning Git pour :
   * [Windows](https://gitforwindows.org/),
@@ -74,17 +77,20 @@ Pour installer la version de développement de SoosyzeCMS, sont requis :
 Quand vous disposerez de ces prérequis, vous pourrez alors vous rendre dans le répertoire de votre serveur, ouvrir une invite de commandes, et remplacer le terme `[my-directory]` par le répertoire qui hébergera votre site.
 
 Clonez le repo avec Git sur votre serveur :
+
 ```sh
 git clone https://github.com/soosyze/soosyze.git [my-directory]
 cd [my-directory]
 ```
 
 Installez les dépendances avec Composer (*assurez-vous que l’exécutable php est dans votre PATH*) :
+
 ```sh
 composer install --no-dev
 ```
 
 Ou si vous utilisez le fichier PHAR :
+
 ```sh
 php composer.phar install --no-dev
 ```
@@ -95,13 +101,12 @@ Pour suivre les tutoriels, je vous invite à installer le CMS à la racine de vo
 
 Maintenant que les fichiers sources sont au bon endroit, ouvrez un navigateur web (*Firefox, Chrome, Opéra, Safarie, Edge…*), et dans la barre d’adresse, entrez la valeur suivante :
 
-
 *   en local : [127.0.0.1/soosyze](http://127.0.0.1/soosyze),
 *   en ligne : votre nom de domaine.
 
 La page suivante se présentera à vous. Remplissez tous les champs et cliquez sur **Installer**.
 
-![Screenshot de la page d’instalaltion de SoosyzeCMS](https://soosyze.com/assets/files/screen/install-desktop.png)
+![Screenshot de la page d’instalaltion de SoosyzeCMS](/assets/user/install-desktop.png)
 
 Et voilà, le CMS est installé !
 

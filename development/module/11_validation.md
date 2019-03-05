@@ -1,4 +1,4 @@
-﻿# Validation de données
+# Validation de données
 
 Une fois vos formulaires de création et d’édition réalisés, vous devez valider si les données correspondent à vos attentes.
 
@@ -201,6 +201,7 @@ public function store( $req )
 ```
 
 Il ne reste plus qu’à modifier la fonction d’affichage du formulaire d’ajout d’item et son template. Dans un premier temps, nous allons gérer la conservation des données du formulaire en cas d’erreur :
+
 ```php
 /* Délcaration des données d’un item vide. */
 $data = ['title'=>'', 'height' => 1, 'achieve' => false ];

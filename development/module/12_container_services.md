@@ -1,4 +1,4 @@
-﻿# Services et Container
+# Services et Container
 
 Un service, comme son nom l’indique est un objet fournissant un service au reste de l’application. Par exemple, le composant `FormBuilder` fournit un service simple pour générer un formulaire HTML à partir d’une déclaration PHP. Mais `FormBuilder` n’est pas dépendant d’autres objets, ni dans sa construction ni dans son utilisation.
 

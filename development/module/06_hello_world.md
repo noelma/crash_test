@@ -1,4 +1,4 @@
-﻿# Hello World !
+# Hello World !
 
 Comme précisé dans l’introduction, SoosyzeCMS est basé sur SoosyzeFramework qui est un framework MVC (*Modèle Vue Controller*) orienté objet.
 

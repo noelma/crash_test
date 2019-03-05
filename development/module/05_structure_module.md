@@ -1,10 +1,10 @@
-﻿# Structure d’un module
+# Structure d’un module
 
 Pour notre exemple, rendez-vous dans le répertoire `app/modules`, créez un nouveau répertoire et nommez-le `TodoModule`.
 
 Un module doit contenir l’arborescence suivante :
 
-```textile
+```
 TodoModule/
 ├── Config/     Les fichiers de configurations et paramétrages.
 ├── Controller/ Les contrôleurs.

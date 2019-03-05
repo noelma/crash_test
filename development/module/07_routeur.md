@@ -1,9 +1,10 @@
-﻿# Routeur
+# Routeur
 
 Quand une URL est appelée, le routeur cherche dans tous vos modules une correspondance avec leurs routes. 
 
 Pour que votre fichier de route soit exécuté, vous devez ajouter l’attribut `$pathRoutes` à votre contrôleur `TodoController` et définir le chemin jusqu’au fichier `routing.json`. 
 Vous pouvez vous aider des constantes fournies par SoosyzeCMS :
+
 * `MODULES_CONTRIBUED`, chemin des modules contributeurs,
 * `DS`, alias de la constante `DIRECTORY_SEPARATOR`, permet de ne pas dépendre du système hôte (*pour séparer le nom des répertoires, Linux ou Mac utilisent `/`, et Windows utilise `\`*).
 
@@ -34,9 +35,9 @@ Vous pouvez définir n’importe quel répertoire pour vos routes ou même le no
 
 Je vous invite néanmoins à suivre les conventions de nommage suivantes :
 
-- Les fichiers de vos routes se situent dans un répertoire nommé `Config` dans chacun de vos modules,
-- Si vous n’avez qu’un fichier de route, son nom peut être nommé `routing.json`,
-- Dans le cas ou votre module possède plusieurs contrôleurs et donc plusieurs fichiers de routes, il est recommandé que chaque fichier soit nommé `routing-nom_controller.json`.
+* Les fichiers de vos routes se situent dans un répertoire nommé `Config` dans chacun de vos modules,
+* Si vous n’avez qu’un fichier de route, son nom peut être nommé `routing.json`,
+* Dans le cas ou votre module possède plusieurs contrôleurs et donc plusieurs fichiers de routes, il est recommandé que chaque fichier soit nommé `routing-nom_controller.json`.
 
 Le format JSON est beaucoup utilisé dans SoosyzeFramework, je vous conseille alors de vous doter d’un validateur de JSON. Vous éviterez plus facilement les erreurs de JSON mal écrits. 
 J’utilise par exemple [https://jsonformatter.curiousconcept.com/](https://jsonformatter.curiousconcept.com/).
