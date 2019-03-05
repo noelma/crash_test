@@ -1,9 +1,6 @@
 # Repertory
-/build/
 /nbproject/
-/vendor/
 
 # Files
 /*.lock
 /*.phar
-/.php_cs.cache
