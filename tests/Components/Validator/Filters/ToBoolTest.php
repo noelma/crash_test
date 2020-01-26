@@ -40,6 +40,7 @@ class ToBoolTest extends Filter
             'false_void'     => 'to_bool'
         ])->isValid();
 
+        var_dump($this->object->getInputs());
         /* True */
         $this->assertTrue(is_bool($this->object->getInput('true')));
         $this->assertTrue(is_bool($this->object->getInput('true_txt')));

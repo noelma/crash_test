@@ -38,6 +38,7 @@ class ToIntTest extends Filter
             'max'      => 'to_int'
         ])->isValid();
 
+        var_dump($this->object->getInputs());
         /* Standard */
         $this->assertTrue(is_int($this->object->getInput('int')));
         $this->assertTrue(is_int($this->object->getInput('txt')));
