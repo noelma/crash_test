@@ -46,7 +46,6 @@ class ToFloatTest extends Filter
             'cast_txt'    => 'to_float'
         ])->isValid();
 
-        var_dump($this->object->getInputs());
         /* Standard */
         $this->assertTrue(is_float($this->object->getInput('float')));
         $this->assertTrue(is_float($this->object->getInput('txt')));
