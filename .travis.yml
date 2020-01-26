@@ -13,6 +13,7 @@ matrix:
   - php: 7.2
   - php: 7.3
   - php: 7.4
+  - php: nightly
 
 before_script:
   - if [[ "$TRAVIS_PHP_VERSION" == '7.3' ]]; then composer require php-coveralls/php-coveralls:2.* -n ; fi
