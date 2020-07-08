@@ -113,3 +113,4 @@ return PhpCsFixer\Config::create()
             'unary_operator_spaces'                      => true
         ])
         ->setFinder($finder);
+
