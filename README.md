@@ -1,273 +1,178 @@
-# Soosyze kses (kses strips evil scripts)
+<p align="center"><a href="https://soosyze.com/" rel="noopener" target="_blank"><img src="https://soosyze.com/assets/files/logo/soosyze-name.png"></a></p>
 
-[![Build Status](https://travis-ci.org/soosyze/kses.svg?branch=master)](https://travis-ci.org/soosyze/kses "Travis")
-[![Coverage Status](https://coveralls.io/repos/github/soosyze/kses/badge.svg?branch=master)](https://coveralls.io/github/soosyze/kses?branch=master "Coveralls")
-[![GitHub](https://img.shields.io/github/license/soosyze/kses)](https://github.com/soosyze/kses/blob/master/LICENSE "LICENSE")
-[![Packagist](https://img.shields.io/packagist/v/soosyze/kses.svg)](https://packagist.org/packages/soosyze/kses "Packagist")
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/soosyze/kses.svg)](#version-php)
+[![License](https://img.shields.io/github/license/soosyze/soosyze.svg)](https://github.com/soosyze/soosyze/blob/master/LICENSE "LICENSE")
+[![PHP from Packagist](https://img.shields.io/badge/php-%3E%3D5.4-blue.svg)](/README.md#version-php "PHP version 5.4 minimum")
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/4102/badge)](https://bestpractices.coreinfrastructure.org/projects/4102)
+[![Download Soosyze CMS](https://img.shields.io/badge/download-releases%20latest-blue.svg)](https://github.com/soosyze/soosyze/releases/latest/download/soosyze.zip "Download Soosyze CMS")
 
-## Introduction
+* :gb: [README in English](README.md)
+* :fr: [README en Français](README_fr.md)
 
-Welcome to kses - an HTML/XHTML filter written in PHP. It removes all unwanted HTML elements and attributes, no matter how malformed HTML input you give it.
-Checks on attribute values. Can be used to avoid Cross-Site Scripting (XSS), Buffer Overflows and Denial of Service attacks, among other things.
+# About
 
-Pass the tests of protection against XSS attacks proposed by the [OWASP® Foundation](https://owasp.org/www-community/xss-filter-evasion-cheatsheet).
+Soosyze CMS is a micro content management system without a database. It's easy to create and manage your website easily with little or no technical knowledge. It is based on an MVC micro-framework in object-oriented PHP and on a noSQL library to ensure its stability and evolution.
 
-## Features
+To encourage us to continue the development of Soosyze CMS do not hesitate to put a star :star: Github. Thank you :heart:
 
-Some of kses current features are:
+* :point_right: [Site](https://soosyze.com)
+* :eyes: [Demo](https://demo.soosyze.com)
+* :dizzy: [Extensions and themes](https://github.com/soosyze-extension)
+* :speech_balloon: [Forum](https://community.soosyze.com)
+* :mortar_board: [Documentations](https://github.com/soosyze/documentations)
+* :green_book: [PHP Doc](https://api.soosyze.com)
+* :globe_with_meridians: [Translation](https://trad.framasoft.org/project/view/soosyze?dswid=-5497)
 
-* It will only allow the HTML elements and attributes that it was explicitly told to allow,
-* Element and attribute names are case-insensitive (`a href` vs `A HREF`),
-* It will understand and process whitespace correctly,
-* Attribute values can be surrounded with quotes, apostrophes or nothing,
-* It will accept valueless attributes with just names and no values (selected),
-* It will accept XHTML's closing ` /` marks,
-* Attribute values that are surrounded with nothing will get quotes to avoid producing non-W3C conforming HTML,
-  * Example : `<a href=http://foo.com>` works but isn't valid HTML.
-* It handles lots of types of malformed HTML, by interpreting the existing code the best it can and then rebuilding new code from it.
-  That's a better approach than trying to process existing code, as you're bound to forget about some weird special case somewhere. It handles problems like never-ending quotes and tags gracefully,
-* It will remove additional `<` and `>` characters that people may try to sneak in somewhere,
-* It supports checking attribute values for minimum/maximum length and minimum/maximum value, to protect against Buffer Overflows and Denial of Service attacks against WWW clients and various servers.
-  You can stop `<iframe src= width= height=>` from having too high values for width and height, for instance,
-* It has got a system for allowed listing URL protocols. You can say that attribute values may only start with `http:`, `https:`, `ftp:` and `gopher:`, but no other URL protocols (`javascript:`, `java:`, `about:`, `telnet:`..). 
-  The functions that do this work handle whitespace, upper/lower case, HTML entities (`jav&#97;script:`) and repeated entries (`javascript:javascript:alert(57)`),
-* It also normalizes HTML entities as a nice side effect,
-* It removes Netscape 4's JavaScript entities `&{alert(57)};`,
-* It handles `NULL` bytes and Opera's `chr(173)` whitespace characters,
-* Provides allowlists of tag and protocol.
+Find us on the networks :
 
-## Requirements
+* :busts_in_silhouette: [Mastodon](https://mamot.fr/@soosyze)
+* :telephone_receiver: [Discord](https://discordapp.com/invite/parFfTt)
 
-### Version PHP
+# Summary
 
-| Version PHP                 | Soosyze Kses     1.x |
-|-----------------------------|----------------------|
-| <= 5.3                      | ✗ Non supporté       |
-| 5.4 / 5.5 / 5.6             | ✓ Supporté           |
-| 7.0 / 7.1 / 7.2 / 7.3 / 7.4 | ✓ Supporté           |
+* [Screenshots](#screenshots)
+* [Installation requirements](#installation-requirements)
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [License](#license)
 
-## Installation
+# Screenshots
 
-### Composer
+[![Screenshot of Soosyze CMS](https://soosyze.com/assets/files/screen/devices-accueil.png)](https://soosyze.com/#screenshot)
 
-To install **Kses** via Composer you must have the installer or the binary file [Composer](https://getcomposer.org/download/)
+# Installation requirements
 
-Go to your project directory, open a command prompt and run the following command:
+## Web Server
+
+| Web server              | Soosyze 1.x   |
+|-------------------------|---------------|
+| Apache HTTP Server 2.2+ | ✓ Supported   |
+| Ngnix 1+                | ✓ Supported*  |
+| IIS                     | ✓ Supported** |
+
+*For Nginx, see the [installation recommendation](#ngnix)
+**For IIS, see the [installation recommendation](#iis)
+
+## PHP version
+
+| PHP version                 | Soosyze 1.x   |
+|-----------------------------|---------------|
+| <= 5.3                      | ✗ Unsupported |
+| 5.4 / 5.5 / 5.6             | ✓ Supported   |
+| 7.0 / 7.1 / 7.2 / 7.3 / 7.4 | ✓ Supported   |
+
+With PHP 7.x, your performance in terms of memory and performance will increase by 30% to 45%. Your site will be faster and better referenced.
+
+## Required PHP extensions
+
+* `date` for the dates format,
+* `fileinfo` for file validation,
+* `filter` to validate your data,
+* `gd` for image processing,
+* `json` to save data and configurations,
+* `mbstring` for your emails,
+* `session` to store your data (server side) from one page to another,
+* `zip` to create backups and restore them in case of error.
+
+These extensions are usually active by default. But if he missed an error message, he would come to inform you.
+
+## Required memory
+
+Soosyze (excluding contributor modules) requires 8MB of memory.
+
+## Browsers support
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>iOS Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/samsung-internet/samsung-internet_48x48.png" alt="Samsung" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Samsung | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera |
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| Edge| last 10 versions| last 10 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions |
+
+## Internet connection
+
+The basic themes use the following CNDs:
+
+* JQuery 3.2.1,
+* Sortable 1.8.3,
+* Font Awesome 5.8.1
+
+# Installation
+
+### :bike: Simple download
+
+To install **the production version of the Soosyze CMS**, download and uncompress the archive of the [latest version of the CMS](https://github.com/soosyze/soosyze/releases/latest/download/soosyze.zip) in the directory that will host your site.
+
+### :car: Download via Composer
+
+To install **the production version of Soosyze CMS** via Composer it is necessary to have:
+
+* The installer or the binary file [Composer](https://getcomposer.org/download/),
+* And the `php` command in your environment variables.
+
+Go to the directory of your server, open a command prompt and run the command:
+
 ```sh
-composer require soosyze/kses --no-dev
+php composer.phar create-project soosyze/soosyze [my-directory] --stability=beta --no-dev
+```
+
+### :airplane: Download via Git & Composer
+
+To install the production version of Soosyze CMS via Git and Composer it is necessary to have:
+
+* Git :
+  * [Windows](https://gitforwindows.org/),
+  * [Mac](http://sourceforge.net/projects/git-osx-installer/)
+  * Debian, Ubuntu... `sudo apt install git`,
+  * Red Hat, Fedora, CentOS... `sudo yum install git`,
+* The installer or the binary file [Composer](https://getcomposer.org/download/),
+* And the `php` command in your environment variables.
+
+Go to the directory of your server, open a command prompt and run the command:
+
+Clone the repo with Git on your server,
+```sh
+git clone https://github.com/soosyze/soosyze.git [my-directory]
+cd [my-directory]
+```
+
+Install dependencies with Composer,
+```sh
+composer install --no-dev
 ```
 
 Or, if you use the binary file,
 ```sh
-php composer.phar require soosyze/kses --no-dev
+php composer.phar install --no-dev
 ```
 
-## Use It
+To follow the tutorials, install the CMS at the root of your server and keep the `soosyze` default directory.
 
-It's very easy to use kses in your own PHP web application! Basic usage looks like this:
+### CMS installation
 
-```php
-<?php
+Now that the source files are in the right place, open a web browser (Firefox, Chrome, Opera, Safari, Edge ...) and in the address bar, enter the following value :
 
-require __DIR__ . '/vendor/autoload.php';
+* Local, [127.0.0.1/soosyze](http://127.0.0.1/soosyze),
+* Online, your domain name.
 
-use Kses\Kses;
+The next page will come to you. Follow the instructions to install the CMS.
 
-$allowedTags = [
-    'a'  => [
-        'href'  => 1,
-        'title' => 1
-    ],
-    'b'  => [],
-    'br' => [],
-    'i'  => [],
-    'p'  => [ 
-        'align' => 1
-    ]
-];
+![Screenshot of Soosyze CMS installation page](https://soosyze.com/assets/files/screen/install-desktop.png)
 
-$allowedProtocols = [ 'http', 'https' ];
+That's it, the CMS is installed.
 
-$xss = new Kses($allowed, $allowedProtocols);
+## Configuration
 
-$xss->filter('
-    <h1>Lorem ipsum</h1>
-    <p>Quisque sed ligula pulvinar, tempor dolor sit amet, placerat nisl.</p>
-');
+### Ngnix
 
-// Lorem ipsum
-// <p>Quisque sed ligula pulvinar, tempor dolor sit amet, placerat nisl.</p>
+If you use Nginx, add the following items to your server's configuration block to ensure the security of CMS Soosyze:
+```
+include path\soosyze\.nginx.conf;
 ```
 
-This definition of `$allowed` means that only the elements `b`, `i`, `a`, `p` and `br` are allowed (along with their closing tags `/b`, `/i`, `/a`, `/p` and `/br`). 
-`b`, `i` and `br` may not have any attributes. 
-`a` may only have the attributes `href` and `title`, while `p` may only have the attribute `align`. 
-You can list the elements and attributes in the array in any mixture of upper and lower case. kses will also recognize HTML code that uses both lower and upper case.
+### IIS
 
-It's important to select the right allowed attributes, so you won't open up an XSS hole by mistake.
-Some important attributes that you mustn't allow include but are not limited to:
+If you use IIS, **you must block access to the following directories**:
 
-* Style,
-* All intrinsic events attributes (`onMouseOver` and so `on`, `on*` really).
+* `app/config`,
+* `app/data`.
 
-It's also important to note that kses HTML input must be cleaned of all slashes coming from magic quotes.
-If the rest of your code requires these slashes to be present, you can always add them again after calling kses with a simple `addslashes()` call.
+# License
 
-## Use It with allowlist
-
-Authorization lists for tags and protocols are available :
-
-* [KsesAllowedList::getProtocols();](src/KsesAllowedList.php#L7), list of default protocols,
-* [KsesAllowedList::getTags();](src/KsesAllowedList.php#L31), list of default tags,
-* [KsesAllowedList::getTagsAdmin()](src/KsesAllowedList.php#L119).
-
-```php
-<?php
-
-require __DIR__ . '/vendor/autoload.php';
-
-use Kses\Kses;
-use Kses\KsesAllowedList;
-
-$xss = new Kses();
-/**
- * Similar to :
- * $xss = new Kses(KsesAllowedList::getTags(), KsesAllowedList::getProtocols());
- */
-
-$xss->filter('<SCRIPT SRC=http://xss.rocks/xss.js></SCRIPT>');
-// Result : ''
-
-$xss->filter('<IMG SRC="javascript:alert(\'XSS\');">');
-// Result : '<IMG src="alert(\'XSS\');">'
-
-$xss->filter('\<a onmouseover=alert(document.cookie)\>xxs link\</a\>');
-// Result : '\<a>xxs link\</a>'
-```
-
-### kses attribute value checks
-
-As you've probably already read in the README file, an $allowed_html array normally looks like this:
-
-```php
-$allowed = [
-    'a'  => [
-        'href'  => 1,
-        'title' => 1
-    ],
-    'b'  => [],
-    'br' => [],
-    'i'  => [],
-    'p'  => [ 
-        'align' => 1
-    ]
-];
-```
-
-This sets what elements and attributes are allowed.
-
-From kses 0.2.0, you can also perform some checks on the attribute values. You do it like this:
-
-```php
-$allowed = [
-    'a'    => [
-        'href'  => [
-            'maxlen' => 100
-        ],
-        'title' => 1
-    ],
-    'b'    => [],
-    'br'   => [],
-    'i'    => [],
-    'p'    => [
-        'align' => 1
-    ],
-    'font' => [
-        'size' => [
-            'maxval' => 20
-        ]
-    ]
-];
-```
-
-This means that kses should perform the maxlen check with the value 100 on the `<a href=>` value, as well as the maxval check with the value 20 on the `<font size=>` value.
-
-The currently implemented checks (with more to come) are **maxlen**, **maxval**, **minlen**, **minval** and **valueless**.
-
-### maxlen
-
-'maxlen' checks that the length of the attribute value is not greater than the given value.
-It is helpful against Buffer Overflows in WWW clients and various servers on the Internet.
-In my example above, it would mean that `<a href='ftp://ftp.v1ct1m.com/AAAA..thousands_of_A's...'>` wouldn't be accepted.
-
-Of course, this problem is even worse if you put that long URL in a `<frame>` tag instead, so the WWW client will fetch it automatically without a user having to click it.
-
-### maxval
-
-**maxval** checks that the attribute value is an integer greater than or equal to zero, that it doesn't have an unreasonable amount of zeroes or whitespace (to avoid Buffer Overflows), and that it is not greater than the given value.
-In my example above, it would mean that `<font size='20'>` is accepted but `<font size='21'>` is not. 
-This check helps against Denial of Service attacks against WWW clients.
-
-One example of this DoS problem is `<iframe src="http://some.web.server/" width="20000" height="2000">`, which makes some client machines completely overloaded.
-
-### minlen and minval
-
-**minlen** and **minval** works the same as **maxlen** and **maxval**, except that they check for minimum lengths and values instead of maximum ones.
-
-### valueless
-
-**valueless** checks if an attribute has a value (like `<a href="blah">`) or not (`<option selected>`).
-If the given value is a "y" or a "Y", the attribute must not have a value to be accepted.
-If the given value is an "n" or an "N", the attribute must have a value.
-Note that `<a href="">` is considered to have a value, so there's a difference between valueless attributes and attribute values with the length zero.
-
-You can combine more than one check, by putting one after the other in the inner array.
-
-### Allowed listed URL protocols
-
-By default Kses loads with its own list of protocols:
-* ftp, http, https, irc, news, nntp, rtsp, sftp, ssh, tel, telnet, webcal.
-
-Pretty reasonable, but anyone who wants to change it just calls the `setAllowedProtocols()` or `addAlloweProtocol()` function with a third parameter, like this:
-
-```php
-$xss = new Kses();
-
-$xss->setAllowedProtocols(['http', 'https']);
-
-$xss->addAlloweProtocol('news');
-```
-
-Note that you shouldn't include any colon after http or other protocol names.
-
-## Bug reports
-
-The first authors of Kses no longer seem to maintain the code. Used by Wordpress and Drupal, we will closely monitor their implementations.
-
-If you have found any security problems (particularly XSS, naturally) in kses, please contact Soosyze CMS team privately on Discord, Mastodon or the Forum so he can correct it before you or someone else tells the public about it.
-
-(No, it's not a security problem in kses if some program that uses it allows a bad attribute, silly. If kses is told to accept the element body with the attributes style and onLoad, it will accept them, even if that's a really bad idea, securitywise.)
-
-## The first authors of Kses
-
-* **Ulf Harnhammar**, (main coder, project leader) metaur at users dot sourceforge dot net http://www.advogato.org/person/metaur/
-* **Richard R. Vásquez, Jr.**, (coder of object-oriented kses) contact him at http://chaos.org/contact/
-
-### Thanks to
-
-* **Peter Valach**, code review and feature suggestions
-* **Simon Cornelius P. Umacob**, testing
-* **Dirk Haun**, feature suggestion
-* **Hendy Irawan**, bug report and documentation suggestion
-* **dude21**, feature suggestion
-* **Christian Bolstad**, documentation suggestion
-* **SourceForge**, project hosting
-
-Thanks also go to a lot of people who posted to the Bugtraq and mailing lists about XSS or HTML filters. They gave us some valuable insights.
-
-## License
-
-The program is released under the terms of the GNU General Public License.
-You should look into what that means, before using kses in your programs.
-You can find the full text of the license in the file LICENSE.
+Soosyze CMS is under MIT license. See the [license file](https://github.com/soosyze/soosyze/blob/master/LICENSE) for more information.
