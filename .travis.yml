@@ -11,11 +11,9 @@ matrix:
   - php: 7.2
   - php: 7.3
   - php: 7.4
-    env: ANALYSIS='true'
-
-env:
-  global:
-    - XDEBUG_MODE=coverage
+    env:
+      - ANALYSIS='true'
+      - XDEBUG_MODE=coverage
 
 before_script:
   - pecl install -f msgpack
