@@ -1,5 +1,5 @@
 # Repertory
-/.scannerwork
+/.scannerwork/
 /build/
 /nbproject/
 /vendor/
@@ -7,4 +7,5 @@
 # Files
 /*.lock
 /*.phar
+/*.properties
 /.php_cs.cache
