@@ -16,6 +16,7 @@ matrix:
       - XDEBUG_MODE=coverage
 
 before_script:
+  - if [[ "$ANALYSIS" == 'true' ]]; then pecl install -f igbinary ; fi
   - if [[ "$ANALYSIS" == 'true' ]]; then pecl install -f msgpack ; fi
   - if [[ "$ANALYSIS" == 'true' ]]; then composer require php-coveralls/php-coveralls:^2.2.0 ; fi
   - composer install -n

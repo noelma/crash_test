@@ -2,13 +2,11 @@
 
 namespace Queryflatfile\Test;
 
-/**
- * @group driver
- */
 class MsgPackTest extends \PHPUnit\Framework\TestCase
 {
-    const DIR_TEST = 'tests/msgpack';
+    const TEST_DIR = 'tests/msgpack';
 
+    const TEST_FILE_NAME = 'driver_test';
     /**
      * @var DriverInterface
      */
@@ -16,18 +14,14 @@ class MsgPackTest extends \PHPUnit\Framework\TestCase
 
     public static function tearDownAfterClass()
     {
-        if (count(scandir(self::DIR_TEST)) == 2) {
-            rmdir(self::DIR_TEST);
+        if( count(scandir(self::TEST_DIR)) == 2 ) {
+            rmdir(self::TEST_DIR);
         }
     }
 
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
     protected function setUp()
     {
-        if (!extension_loaded('msgpack')) {
+        if( !extension_loaded('msgpack') ) {
             $this->markTestSkipped(
                 'The msgpack extension is not available.'
             );
@@ -37,22 +31,26 @@ class MsgPackTest extends \PHPUnit\Framework\TestCase
 
     public function testCreate()
     {
-        $output = $this->driver->create(self::DIR_TEST, 'driver_test', [ 'key_test' => 'value_test' ]);
+        $output = $this->driver->create(
+            self::TEST_DIR, self::TEST_FILE_NAME, [ 'key_test' => 'value_test' ]
+        );
 
         self::assertTrue($output);
-        self::assertFileExists('tests/msgpack/driver_test.msg');
+        self::assertFileExists(self::TEST_DIR . '/driver_test.msg');
     }
 
     public function testNoCreate()
     {
-        $output = $this->driver->create(self::DIR_TEST, 'driver_test', [ 'key_test' => 'value_test' ]);
+        $output = $this->driver->create(
+            self::TEST_DIR, self::TEST_FILE_NAME, [ 'key_test' => 'value_test' ]
+        );
 
         self::assertFalse($output);
     }
 
     public function testRead()
     {
-        $data = $this->driver->read(self::DIR_TEST, 'driver_test');
+        $data = $this->driver->read(self::TEST_DIR, self::TEST_FILE_NAME);
 
         self::assertArraySubset($data, [ 'key_test' => 'value_test' ]);
     }
@@ -62,17 +60,17 @@ class MsgPackTest extends \PHPUnit\Framework\TestCase
      */
     public function testReadException()
     {
-        $this->driver->read(self::DIR_TEST, 'driver_test_error');
+        $this->driver->read(self::TEST_DIR, 'driver_test_error');
     }
 
     public function testSave()
     {
-        $data                 = $this->driver->read(self::DIR_TEST, 'driver_test');
+        $data = $this->driver->read(self::TEST_DIR, self::TEST_FILE_NAME);
+
         $data[ 'key_test_2' ] = 'value_test_2';
 
-        $output = $this->driver->save(self::DIR_TEST, 'driver_test', $data);
-
-        $newJson = $this->driver->read(self::DIR_TEST, 'driver_test');
+        $output  = $this->driver->save(self::TEST_DIR, self::TEST_FILE_NAME, $data);
+        $newJson = $this->driver->read(self::TEST_DIR, self::TEST_FILE_NAME);
 
         self::assertTrue($output);
         self::assertArraySubset($newJson, $data);
@@ -83,13 +81,13 @@ class MsgPackTest extends \PHPUnit\Framework\TestCase
      */
     public function testSaveException()
     {
-        $this->driver->save(self::DIR_TEST, 'driver_test_error', []);
+        $this->driver->save(self::TEST_DIR, 'driver_test_error', []);
     }
 
     public function testHas()
     {
-        $has    = $this->driver->has(self::DIR_TEST, 'driver_test');
-        $notHas = $this->driver->has(self::DIR_TEST, 'driver_test_not_found');
+        $has    = $this->driver->has(self::TEST_DIR, self::TEST_FILE_NAME);
+        $notHas = $this->driver->has(self::TEST_DIR, 'driver_test_not_found');
 
         self::assertTrue($has);
         self::assertFalse($notHas);
@@ -97,9 +95,9 @@ class MsgPackTest extends \PHPUnit\Framework\TestCase
 
     public function testDelete()
     {
-        $output = $this->driver->delete(self::DIR_TEST, 'driver_test');
+        $output = $this->driver->delete(self::TEST_DIR, self::TEST_FILE_NAME);
 
         self::assertTrue($output);
-        self::assertFileNotExists('tests/msgpack/driver_test.msg');
+        self::assertFileNotExists(self::TEST_DIR . '/driver_test.msg');
     }
 }
